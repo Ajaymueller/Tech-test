@@ -6,10 +6,9 @@ const Search = (props) => {
     const [searchText, setSearchText] = useState('');
 
     return (
-        <fragment>
+        <fragment className="searchInput">
             <span>Search for an image here:</span>
-            <input type="text" 
-            className="searchInput" />
+            <input type="text" />
             <button>Go!</button>
         </fragment>
     )

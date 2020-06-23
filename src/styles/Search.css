@@ -1,0 +1,6 @@
+.searchInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
