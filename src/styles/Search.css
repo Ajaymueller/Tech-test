@@ -1,16 +1,16 @@
-.searchInput {
+.searchForm {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 40px;
 }
 
-.search {
+.search-input {
     border-radius: 10px;
 }
 
 .submit-button {
-    background-color: #4CAF50;
+    background-color: red;
     border-radius: 25px;
 }
 

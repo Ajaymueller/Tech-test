@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import '../styles/Search.css'
+import '../styles/Search.css';
+import getImages from '../requests/getImages';
 
 const Search = (props) => {
 
@@ -9,14 +10,18 @@ const Search = (props) => {
         setSearchText(e.target.value)
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        getImages(searchText);
+    };
+
     return (
-        <fragment className="searchInput">
-            <form>
-            <span>Search for an image here:</span>
+        <fragment className="searchForm">
+            <form onSubmit={handleSubmit}>
             <input type="text"
             onChange={handleInputChange}
             value={searchText}
-            className="search" />
+            className="search-input" />
             <button type="submit"
             className="submit-button">
             Go!
