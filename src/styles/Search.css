@@ -4,3 +4,18 @@
     justify-content: flex-start;
     padding-top: 40px;
 }
+
+.search {
+    border-radius: 10px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    border-radius: 25px;
+}
+
+.submit-button:hover {
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    cursor: pointer;
+}

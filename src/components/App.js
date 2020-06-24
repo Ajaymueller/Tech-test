@@ -6,7 +6,8 @@ const App = () => {
   return (
     <div className="App">
       <img src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg" 
-      className="logo" />
+      className="logo"
+      alt="nasa-logo" />
     <Search />
   </div>
   )
