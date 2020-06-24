@@ -7,7 +7,8 @@ const getImages = (query) => {
         axios
         .get(`https://images-api.nasa.gov/search?q=${query}`)
         .then((response) => {
-            console.log(response)
+            const imageResults = response.data.collection.items
+            console.log(imageResults)
             .catch((error) => {
                 console.log(error)
             })
