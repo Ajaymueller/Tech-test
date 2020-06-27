@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Search.css';
 import getImages from '../requests/getImages';
 
@@ -10,13 +11,13 @@ const Search = ({ setSearchResults }) => {
         setSearchText(e.target.value)
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        setSearchResults(getImages(searchText));
+        setSearchResults(await getImages(searchText));
     };
 
     return (
-        <fragment className="searchForm">
+        <div className="searchForm">
             <form onSubmit={handleSubmit}>
             <input type="text"
             onChange={handleInputChange}
@@ -27,8 +28,12 @@ const Search = ({ setSearchResults }) => {
             Go!
             </button>
             </form>
-        </fragment>
+        </div>
     )
 }
+
+Search.propTypes = {
+    setSearchResults: PropTypes.func.isRequired,
+  };
 
 export default Search;

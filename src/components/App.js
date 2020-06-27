@@ -12,7 +12,7 @@ const App = () => {
       className="logo"
       alt="nasa-logo" />
     <Search setSearchResults={setSearchResults} />
-    <SearchResults searchResults/>
+    <SearchResults results={searchResults} />
   </div>
   )
 
