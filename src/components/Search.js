@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../styles/Search.css';
 import getImages from '../requests/getImages';
 
-const Search = (props) => {
+const Search = ({ setSearchResults }) => {
 
     const [searchText, setSearchText] = useState('');
 
@@ -12,7 +12,7 @@ const Search = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        getImages(searchText);
+        setSearchResults(getImages(searchText));
     };
 
     return (

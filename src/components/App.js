@@ -4,15 +4,15 @@ import Search from './Search'
 import SearchResults from './SearchResults'
 
 const App = () => {
-  const [searchResults, setSearchResults] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
     <div className="App">
       <img src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg" 
       className="logo"
       alt="nasa-logo" />
-    <Search />
-    <SearchResults />
+    <Search setSearchResults={setSearchResults} />
+    <SearchResults searchResults/>
   </div>
   )
 
